@@ -1,3 +1,4 @@
+import random
 #Write a program that takes two integers as input, base and exponent, and calculates the power using loops.
 def part1(base = 5, exp = 3, custom = False):
     print('====================================== part 1  "Base and exponent"')
@@ -51,6 +52,48 @@ def part6(str = "abcdefg"):
 
     print(f'Input string "{str}" in reverse = "{str[::-1]}"')
 
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+    
+# Given a list of integers, return True if the sequence of numbers 1, 2, 3 appears in the list somewhere
+def arrayCheck(array = [1, 1, 2, 3, 1]):
+    for i in range(len(array)-2):
+        if array[i]==1 and array[i+1]==2 and array[i+2]==3:
+            print(f'The sequence of numbers 1, 2, 3 appears in the list {array}')
+            return True
+    print(f'The sequence of numbers 1, 2, 3 does not appear in the list {array}')
+    return False
+
+# Given a string, return a new string made of every other character starting with the first, so "Hello" yields "Hlo".
+
+def stringBits(str = 'Hello'):
+    print(str[::2])
+    return(str[::2])
+
+# Given a string, return a string where for every char in the original, there are two chars.
+
+def doubleChar(str = 'The'):
+    str_res = ''
+    for ch in str:
+        str_res = str_res + 2*ch
+    print(str_res)
+    return(str_res)
+
+# Return the number of even integers in the given array/list
+
+def count_evens(lst = [1,2,3,4,5,6]):
+    count = 0
+    for item in lst:
+        if item % 2 == 0:
+            count = count + 1
+    print(f'There are {count} even integers in {lst}')
+
+
+
+  
+
+
 
 def call_all():
     part1()
@@ -59,5 +102,15 @@ def call_all():
     part4()
     part5()
     part6()
+    arrayCheck()
+    arrayCheck([1, 1, 2, 4, 1])
+    stringBits()
+    stringBits('Heeololeo')
+    doubleChar()
+    count_evens()
+    count_evens([2, 2, 0])
+
+
+
 
 call_all()
