@@ -11,7 +11,7 @@ def the_game():
 4. Based on these clues you will guess again until you break the code with a
  perfect match!
     """""
-    print('Welcome stranger, guess the  3 digit number')
+    print('\n\n#############################################\nWelcome stranger, guess the  3 digit number')
     the_number =  list(range(1, 10))
     shuffle(the_number)
     the_number = the_number[:3]

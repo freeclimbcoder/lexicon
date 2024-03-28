@@ -58,7 +58,9 @@ def part6(str = "abcdefg"):
 ###############################################################################################################
     
 # Given a list of integers, return True if the sequence of numbers 1, 2, 3 appears in the list somewhere
+    
 def arrayCheck(array = [1, 1, 2, 3, 1]):
+    print('\n====================================== Given a list of integers, return True if the sequence of numbers 1, 2, 3 appears in the list somewhere')
     for i in range(len(array)-2):
         if array[i]==1 and array[i+1]==2 and array[i+2]==3:
             print(f'The sequence of numbers 1, 2, 3 appears in the list {array}')
@@ -69,12 +71,14 @@ def arrayCheck(array = [1, 1, 2, 3, 1]):
 # Given a string, return a new string made of every other character starting with the first, so "Hello" yields "Hlo".
 
 def stringBits(str = 'Hello'):
+    print('\n====================================== Given a string, return a new string made of every other character starting with the first, so "Hello" yields "Hlo"')
     print(str[::2])
     return(str[::2])
 
 # Given a string, return a string where for every char in the original, there are two chars.
 
 def doubleChar(str = 'The'):
+    print(' \n====================================== Given a string, return a string where for every char in the original, there are two chars.')
     str_res = ''
     for ch in str:
         str_res = str_res + 2*ch
@@ -84,6 +88,7 @@ def doubleChar(str = 'The'):
 # Return the number of even integers in the given array/list
 
 def count_evens(lst = [1,2,3,4,5,6]):
+    print('\n====================================== Return the number of even integers in the given array/list')
     count = 0
     for item in lst:
         if item % 2 == 0:
