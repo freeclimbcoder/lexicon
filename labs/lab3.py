@@ -1,4 +1,5 @@
-import random
+import the_game
+
 #Write a program that takes two integers as input, base and exponent, and calculates the power using loops.
 def part1(base = 5, exp = 3, custom = False):
     print('====================================== part 1  "Base and exponent"')
@@ -114,3 +115,5 @@ def call_all():
 
 
 call_all()
+
+the_game.the_game()
