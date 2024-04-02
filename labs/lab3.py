@@ -83,7 +83,8 @@ def doubleChar(str = 'The'):
     for ch in str:
         str_res = str_res + 2*ch
     print(str_res)
-    return(str_res)
+    return ''.join([char*2 for char in str])
+    
 
 # Return the number of even integers in the given array/list
 
@@ -94,6 +95,8 @@ def count_evens(lst = [1,2,3,4,5,6]):
         if item % 2 == 0:
             count = count + 1
     print(f'There are {count} even integers in {lst}')
+    return sum([1 for num in lst if num % 2 == 0])
+    
 
 
 
@@ -118,7 +121,7 @@ def call_all():
 
 
 
-
 call_all()
+print(count_evens())
 
 the_game.the_game()
