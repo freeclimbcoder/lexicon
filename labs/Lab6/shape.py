@@ -31,7 +31,7 @@ class Circle(Shape):
         else:
             raise ValueError("Radius must be positive")
 
-    def area(self):
+    def area(self) -> float:
         return self.radius**2*3.14
     
     def perimeter(self):
@@ -71,10 +71,10 @@ class  Rectangle(Shape):
         else:
             raise ValueError("Width must be positive")
     
-    def area(self):
+    def area(self) -> float:
         return self.length*self.width
     
-    def perimeter(self):
+    def perimeter(self) -> float:
         return 2*(self.length+self.width)
     
 class Triangle(Shape):
@@ -104,7 +104,7 @@ class Triangle(Shape):
         return self._c
     
     @a.setter
-    def a(self, value):
+    def a(self, value) -> None:
         """Sets the a side. Must be positive"""
         if value > 0:
             self._a = value
@@ -133,7 +133,7 @@ class Triangle(Shape):
     def area(self) -> float:
         #S = √p · (p — a)(p — b)(p — c),
         p = self.perimeter()/2
-        return p**(1/2)*(p-self.a)*(p-self.b)*(p-self.c)
+        return (p*(p-self.a)*(p-self.b)*(p-self.c))**(1/2)
     
 
 
