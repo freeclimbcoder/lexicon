@@ -1,18 +1,18 @@
 class Student():
     school = '123'
-    
+
     @classmethod
     def get_school(cls):
         return cls.school
 
-    def __init__(self, name, age, grade):
+    def __init__(self, name: str, age: int, grade: int):
         self._name = name
         self._age = age
         self._grade = grade
     
     def __str__(self):
         return f'\nname = {self.name} \nage = {self.age} \ngrade = {self.grade}'
-    
+        
     @property
     def name(self):
         """returns _name of the student"""
@@ -43,7 +43,7 @@ class Student():
     def promote(self):
         self._grade = self._grade + 1
     
-sergei = Student('sergei', 16, 11)
+sergei = Student('sergei', '3r', 11)
 anna = Student('Anna', 15, 9)
 print(sergei)
 print(sergei.get_info())
