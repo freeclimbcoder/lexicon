@@ -66,6 +66,6 @@ cycle.stop()
 car = Car('WV', 'California', 2024, 90, 4)
 print(car)
 
-moto = Motorcycle('Honda', 'Africa twin', 2024, 'is this normal?') #<<<=======
+moto = Motorcycle('Honda', 'Africa twin', 2024, 18) 
 print(moto)
 moto.crach()

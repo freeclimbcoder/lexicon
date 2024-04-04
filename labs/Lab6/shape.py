@@ -1,10 +1,13 @@
 class Shape():
     def __init__(self) -> None:
         pass
+
     def __str__(self) -> str:
         return f'area = {self.area()}, perimeter = {self.perimeter()}'
+    
     def area(self):
         return
+    
     def perimeter(self):
         return
 
@@ -83,7 +86,7 @@ class Triangle(Shape):
             self._b = b
             self._c = c
         else:
-            print('any side must be shorter than 1/2 of perimeter')
+            raise ValueError('any side must be shorter than 1/2 of perimeter')
 
     def __str__(self) -> str:
         return f'This is a triangle with sides: a = {self.a}, b = {self.b}, c = {self.c}, {super().__str__()}'
