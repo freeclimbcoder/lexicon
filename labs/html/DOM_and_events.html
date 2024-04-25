@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    
+  </head>
+  <body>
+    <main>
+        <h1>Home</h1>  
+    </main>
+    <ul>
+    <li><p><a href="hello.html">hello.html</a></p></li>
+    <li><p><a href="todo.html">TODO.html</a></p></li>
+    </ul>
+
+    <p>
+    
+    <input type="text" id="num1" /> +
+    <input type="text" id="num2" /> =
+    <input type="text" id="sum" readonly="readonly" />
+    <input type="button" value="Calc" onclick="calc()" />
+    <script>
+     function calc() {
+             document.getElementById('sum').value = parseInt(document.getElementById('num1').value) + parseInt(document.getElementById('num2').value)
+     }
+    </script>
+    </p>
+    <br>
+
+    <p>Welcome to the "Show More Text Example
+        <p>
+    <a href="#" id="more" onclick= "showText()">Read more …</a>
+    <span id="text" style= "display:none">Welcome to JavaScript and DOM.</span>
+    <script>
+        function showText() {
+            document.getElementById('text').style = "display:flex"
+        }
+    </script>
+        </p>
+    </p>
+
+    <br>
+
+    <p>
+        <ul id="items_0">
+            <li>first item</li>
+            <li>second item</li>
+            <li>third item</li>
+           </ul>
+           <textarea id="result"></textarea>
+           <br>
+           <button onclick="extractText()">Extract Text</button>
+           <script>
+            let extractText = () => {
+                let elementsLI = document.getElementsByTagName('li')
+                
+                for(let li of elementsLI){
+                    document.getElementById('result').value += li.textContent + '\n'
+}
+            
+            }
+           </script>Continental Race King Wire
+    </p>
+
+    <p>
+        <h1>List of Items</h1>
+        <ul id="items"></ul>
+        <input type="text" id="newText" />
+        <input type="button" value="Add"
+            onclick="addItem()">
+        <script>
+            let addItem = () => {
+                const len = document.getElementById("items").getElementsByTagName("li").length
+                let li_id = 'element' + parseInt(len+1)
+                const ul = document.getElementById('items')                
+                ul.append(Object.assign(document.createElement('li'), {textContent: li_id, id: li_id}))
+                const li = document.getElementById(li_id)
+                li.append(Object.assign(document.createElement('a'), {textContent: ' [delete]', onclick:deleteItem(li_id) }))
+
+            }
+            let deleteItem = (li_id) => {
+                const el = document.getElementById(li_id)
+                alert(li_id)
+                
+
+            }
+        
+</script>
+    </p>
+
+
+
+
+  </body>
+</html>
