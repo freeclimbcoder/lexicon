@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Base</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <h1>Hello, this is Base.html</h1>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <ul class="container">
+                    <li><a class="navbar-brand" href="{% url 'index' %}">DJANGO</a></li>
+                    <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+                    <li><a class="navbar-link" href="{% url 'reg' %}"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            {% block body_block %}
+
+            {% endblock %}
+
+        </div>
+    </body>
+</html>
