@@ -1,0 +1,14 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Index</title>
+        <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+    </head>
+    <body>
+        <h1>Hello, this is Index.html</h1>
+        <p>{{ insert_me }}</p>
+        <p><a href={{ help_link }}  >{{ help_link_text }}</a></p>
+        <img src="{% static "images/jamie-foxx.jpg" %}" alt="Oh no, it's failed">
+    </body>
+</html>

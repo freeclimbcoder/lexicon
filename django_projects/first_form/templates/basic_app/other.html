@@ -1,0 +1,7 @@
+{% extends "basic_app/base.html" %}
+{% block body_block %}
+        <h1>Hello, this is URL templates.html</h1>
+        <a href="{% url 'other' %}">The other page</a>
+        <a href="{% url 'base' %}">The base page</a>
+        <a href="{% url 'admin:index' %}">The index page</a>
+{% endblock %}
